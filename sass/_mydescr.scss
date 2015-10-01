@@ -1,0 +1,14 @@
+.mydescr{
+  @include clearfix();
+  padding: 0px 0px 50px 0px;
+  margin: 0px 0px 25px 0px;
+  background: url('../img/cont_border.png') 49.5% 100% no-repeat;
+  &_image{
+    float: left;
+    padding: 0px 10px 10px 0px;
+  }
+  &_title{
+    text-align: center;
+    font-size: 22px;
+  }
+}
