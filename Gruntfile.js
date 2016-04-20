@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 			    css: {
                     options: {
                         authKey: 'key1',
-                        host: 'wfs.by',
+                        host: 'webformat.by',
                         dest: 'www/1komnata.by/sites/all/themes/firstroom',
                         //dest: '/home/evasby/www/iphone.wfs.by/sites/all/themes/iphone',
                         port: 21
@@ -68,6 +68,7 @@ module.exports = function(grunt) {
             css: {
                 files: ['sass/*.scss'],
                 tasks: ['sass', 'ftp_push:css'],
+                //tasks: ['sass'],
                 options: {
                     spawn: false,
                 }
@@ -78,6 +79,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-ftp-upload');
     grunt.loadNpmTasks('grunt-ftp-push');
-    grunt.registerTask('default', ['sass', 'ftp_push', 'watch']);
-    //grunt.registerTask('default', ['sass', 'watch']);
+    //grunt.registerTask('default', ['sass', 'ftp_push', 'watch']);
+    grunt.registerTask('default', ['sass', 'watch']);
 };
